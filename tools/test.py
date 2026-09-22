@@ -1,8 +1,10 @@
-"""Offline FRLG runtime regression tests.
+'''Offline FRLG runtime regression tests.
 
-This file specifically guards against relying on mod.game.version. Gen1Recomp's
-live Game3 object does not expose that field during mod entry.
-"""
+Guards:
+- FireRed and LeafGreen encounter patches
+- versionless live Game3 mod surface
+- Pokédex area refresh from merged encounter data
+'''
 
 import importlib
 import json
@@ -79,6 +81,7 @@ def run(runtime_name, game):
         return (ROOT / name).read_text(encoding='utf-8-sig')
 
     lua.globals().read_file = read
+
     lua.execute('package.loaded["src.core.Logger"] = { warn = function() end }')
     lua.execute(
         'package.loaded["src.mods.Merge"] = '
@@ -117,11 +120,11 @@ def run(runtime_name, game):
         map_id = ids[name]
         slot_key = lua.eval('Catalog.slotKeyFor')(map_id)
         group, num = map(int, slot_key.split('_'))
-        out = {'mapGroup': group, 'mapNum': num}
+        rec = {'mapGroup': group, 'mapNum': num}
 
         for field, terrain in field_map.items():
             if field in row:
-                out[terrain] = {
+                rec[terrain] = {
                     'rate': row[field]['encounter_rate'],
                     'slots': [
                         {
@@ -133,19 +136,22 @@ def run(runtime_name, game):
                     ],
                 }
 
-        native[map_id] = out
-        native[f'{group}:{num}'] = out
+        native[map_id] = rec
+        native[f'{group}:{num}'] = rec
 
     lua.globals().native = table(native)
     lua.globals().names = table(
         {num: name for name, num in species.items() if num > 0}
     )
+    lua.globals().snubbull_id = species['SNUBBULL']
+    lua.globals().sentret_id = species['SENTRET']
 
     lua.execute(
-        """
+        r'''
       pokemon = { _names = names }
       engine = { _tables = native }
       fixtureData = {gen3Pokemon=pokemon, gen3Encounters=engine}
+      gameData = {gen3Encounters=engine._tables}
       Schemas.bindGen3(fixtureData)
       before = Merge.deepCopy(native)
 
@@ -162,17 +168,73 @@ def run(runtime_name, game):
         self.ops[id] = true
       end
 
+      -- Minimal engine-internal Pokédex fixtures needed by main.lua.
+      local routeKey = assert(Catalog.slotKeyFor("FR_ROUTE_1"))
+      local routeGroup, routeMap = routeKey:match("^(%d+)_(%d+)$")
+      routeGroup, routeMap = tonumber(routeGroup), tonumber(routeMap)
+
+      local routeGroups = {}
+      routeGroups[routeGroup] = { maps = {} }
+      routeGroups[routeGroup].maps[routeMap + 1] = "FR_ROUTE_1"
+
+      pokedexData = {
+        -- Truthy means "already initialized", so game.ready performs a refresh.
+        _entries = {},
+        _areaData = {
+          markers = {
+            DEX_AREA_ROUTE_1 = { shape = 1, x = 1, y = 1 },
+          },
+          mapsecToArea = {
+            MAPSEC_ROUTE_1 = "DEX_AREA_ROUTE_1",
+          },
+        },
+        _speciesWildAreas = {},
+        _buildSpeciesWildAreas = function() end,
+      }
+
+      package.loaded["src.core.game3.pokedex_data"] = pokedexData
+      package.loaded["src.import.gba.map_groups_firered"] = {
+        groups = routeGroups,
+      }
+      package.loaded["src.import.gba.map_sections_extract"] = {
+        getInfo = function(_, pretName)
+          if pretName == "FR_ROUTE_1" then
+            return { id = "MAPSEC_ROUTE_1" }
+          end
+          return nil
+        end,
+      }
+
+      events = { listeners = {} }
+      function events:on(name, fn)
+        self.listeners[name] = self.listeners[name] or {}
+        table.insert(self.listeners[name], fn)
+      end
+      function events:emit(name, payload)
+        for _, fn in ipairs(self.listeners[name] or {}) do
+          fn(payload)
+        end
+      end
+
       warnings = {}
       mod = {
-        game={}, -- intentionally NO .version, matching live Game3
-        content={
-          encounters=registry,
-          pokemon={get=function(_,name)
-            return Schemas.gen3View.speciesNum(pokemon,name)
-          end}
+        -- Intentionally no .version, matching live Game3.
+        game = { data = gameData },
+        events = events,
+        content = {
+          encounters = registry,
+          pokemon = {
+            get = function(_, name)
+              return Schemas.gen3View.speciesNum(pokemon, name)
+            end,
+          },
         },
-        read=function(_,p) return read_file(p) end,
-        log={warn=function(_,m) warnings[#warnings+1]=m end}
+        read = function(_, p) return read_file(p) end,
+        log = {
+          warn = function(_, m)
+            warnings[#warnings + 1] = m
+          end,
+        },
       }
 
       function boot()
@@ -180,9 +242,27 @@ def run(runtime_name, game):
       end
 
       boot()
-      assert(#warnings==0, table.concat(warnings, "; "))
-      Schemas.gen3View.encounterWrite(engine,registry)
-        """
+      assert(#warnings == 0, table.concat(warnings, "; "))
+
+      -- Real load order: registry writes land before game.ready.
+      Schemas.gen3View.encounterWrite(engine, registry)
+      gameData.gen3Encounters = engine._tables
+      events:emit("game.ready", { game = mod.game })
+
+      local snubbullAreas = pokedexData._speciesWildAreas[snubbull_id]
+      assert(snubbullAreas and #snubbullAreas > 0, "Snubbull has no Pokédex area")
+      assert(
+        snubbullAreas[1] == "DEX_AREA_ROUTE_1",
+        "Snubbull Pokédex area is not Route 1"
+      )
+
+      local sentretAreas = pokedexData._speciesWildAreas[sentret_id]
+      assert(sentretAreas and #sentretAreas > 0, "Sentret has no Pokédex area")
+      assert(
+        sentretAreas[1] == "DEX_AREA_ROUTE_1",
+        "Sentret Pokédex area is not Route 1"
+      )
+        '''
     )
 
     g = lua.globals()
@@ -215,7 +295,7 @@ def run(runtime_name, game):
                 )
 
     print(
-        f'{runtime_name}/{game}: versionless Game3 runtime + encounter patch PASS'
+        f'{runtime_name}/{game}: encounters + Pokédex Route 1 area refresh PASS'
     )
 
 
@@ -223,4 +303,4 @@ for runtime in ('lua54', 'luajit21'):
     for game in ('firered', 'leafgreen'):
         run(runtime, game)
 
-print('FireRed/LeafGreen runtime regression suite: PASS')
+print('FireRed/LeafGreen runtime + Pokédex regression suite: PASS')

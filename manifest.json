@@ -2,7 +2,7 @@
   "id": "firered_johto_hoenn_encounters",
   "name": "FireRed & LeafGreen Johto & Hoenn Encounters",
   "author": "FireRed Johto & Hoenn contributors",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "github": "brewstercm/FireRed-Johto-Hoenn",
   "api": 2,
   "entry": "main.lua",
@@ -17,7 +17,9 @@
   "dependencies": [],
   "optional_dependencies": [],
   "conflicts": [],
-  "permissions": [],
+  "permissions": [
+    "engine_internals"
+  ],
   "affects_link": true,
-  "description": "Adds Johto and Hoenn wild species to FireRed and LeafGreen using habitat-aware, progression-conscious placement while preserving each edition's encounter rates, slot counts, and local level ranges."
+  "description": "Adds Johto and Hoenn wild species to FireRed and LeafGreen using habitat-aware, progression-conscious placement, with Pok\u00e9dex area markers updated from the live modded encounter tables."
 }
