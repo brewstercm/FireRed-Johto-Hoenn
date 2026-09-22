@@ -2,11 +2,13 @@
   "id": "firered_johto_hoenn_encounters",
   "name": "FireRed Johto & Hoenn Encounters",
   "author": "FireRed Johto & Hoenn contributors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "github": "brewstercm/FireRed-Johto-Hoenn",
   "api": 2,
   "entry": "main.lua",
-  "games": ["firered"],
+  "games": [
+    "firered"
+  ],
   "game_version": ">=0.2.73 <1.0.0",
   "profile": "content",
   "category": "Content",
@@ -16,5 +18,5 @@
   "conflicts": [],
   "permissions": [],
   "affects_link": true,
-  "description": "Adds native Johto and Hoenn wild species to FireRed using Crystal/Emerald story progression. Keeps original species, encounter rates, and slot levels. No assets or species-pack dependencies."
+  "description": "Adds Johto and Hoenn wild species to FireRed using habitat-aware, progression-conscious placement while preserving FireRed encounter rates, slot counts, and local level ranges. No asset or species-pack dependencies."
 }

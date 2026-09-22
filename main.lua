@@ -30,49 +30,46 @@ for _, p in ipairs(placements) do
 end
 table.sort(mapIds)
 
-local groups = {
-  land = { {1,12} }, water = { {1,5} },
-  fishing = { {1,2}, {3,5}, {6,10} },
-}
 local lengths = { land = 12, water = 5, fishing = 10 }
-local function preservesNative(before, after, terrain)
-  for _, bounds in ipairs(groups[terrain]) do
-    local kept = {}
-    for i = bounds[1], bounds[2] do kept[after[i].species] = true end
-    for i = bounds[1], bounds[2] do
-      if not kept[before[i].species] then return false end
-    end
-  end
-  return true
-end
 
 for _, mapId in ipairs(mapIds) do
   local record = mod.content.encounters:get(mapId)
   local patch, valid = {}, type(record) == "table"
+
   for _, p in ipairs(grouped[mapId]) do
     local area = valid and record[p.terrain]
     local slots = area and area.slots
-    if type(slots) ~= "table" or #slots ~= lengths[p.terrain]
-        or not slots[p.slot] or slots[p.slot].species ~= p.expected then
+
+    -- Each generated placement records the vanilla species expected in the
+    -- destination slot. If another encounter mod or an engine data change has
+    -- already changed any targeted slot, skip the entire map rather than
+    -- applying a partial patch.
+    if type(slots) ~= "table"
+        or #slots ~= lengths[p.terrain]
+        or not slots[p.slot]
+        or slots[p.slot].species ~= p.expected then
       valid = false
       break
     end
-    if not patch[p.terrain] then patch[p.terrain] = { slots = copy(slots) } end
+
+    if not patch[p.terrain] then
+      patch[p.terrain] = { slots = copy(slots) }
+    end
+
     patch[p.terrain].slots[p.slot].species = p.species
   end
+
   if valid then
-    for terrain, area in pairs(patch) do
-      if not preservesNative(record[terrain].slots, area.slots, terrain) then
-        valid = false
-        break
-      end
-    end
-  end
-  if valid then
-    -- Full-length lists replace; appending slots would not change FireRed's
-    -- fixed 12/5/10-slot rolls. Leave rates and all live level ranges intact.
+    -- Full-length lists replace FireRed's fixed 12/5/10-slot encounter tables.
+    -- Encounter rates and all live level ranges remain untouched. Native
+    -- species are not protected; the generated placement data decides which
+    -- vanilla slots are replaced.
     mod.content.encounters:patch(mapId, patch)
   else
-    warn("Skipping incompatible encounter table " .. mapId .. "; another encounter mod or engine data change may be active")
+    warn(
+      "Skipping incompatible encounter table "
+      .. mapId
+      .. "; another encounter mod or engine data change may be active"
+    )
   end
 end
