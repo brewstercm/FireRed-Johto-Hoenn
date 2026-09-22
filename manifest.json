@@ -2,7 +2,7 @@
   "id": "firered_johto_hoenn_encounters",
   "name": "FireRed & LeafGreen Johto & Hoenn Encounters",
   "author": "FireRed Johto & Hoenn contributors",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "github": "brewstercm/FireRed-Johto-Hoenn",
   "api": 2,
   "entry": "main.lua",
