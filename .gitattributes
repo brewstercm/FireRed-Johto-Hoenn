@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# Preserve downloaded input bytes so hashes and builds agree across platforms.
+tools/source/* -text
+tools/reference/* -text
