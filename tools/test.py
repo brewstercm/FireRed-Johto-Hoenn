@@ -1,4 +1,4 @@
-"""Offline regression tests using the released engine's actual schema/merge code.
+"""Offline FRLG regression tests using the released engine schema/merge code.
 
 Install lupa, or use pip --target tools/test_runtime lupa. No game/ROM required.
 """
@@ -20,42 +20,32 @@ report = json.loads((ROOT / 'PLACEMENTS.json').read_text())
 placements = report['placements']
 selected, excluded = build.candidates()
 
-# Coverage: every selected Johto/Hoenn species is placed exactly once, and every
-# National Dex entry from 152-386 is either placed or explicitly excluded.
 assert {p['dex'] for p in placements} == {p['dex'] for p in selected}
 assert len(placements) == len({p['dex'] for p in placements}) == 118
 assert {p['dex'] for p in placements} | {p['dex'] for p in excluded} == set(
     range(152, 387)
 )
 
-# Authored source-progression edge cases should remain stable.
 assert source_stage('crystal', 'ruins-of-alph', 'outside', 'walk', 'natu') == 4
 assert source_stage('emerald', 'meteor-falls', 'backsmall-room', 'walk', 'bagon') == 8
 assert source_stage('crystal', 'johto-route-46', '', 'walk', 'phanpy') == 0
 assert source_stage('crystal', 'kanto-route-7', '', 'walk', 'houndour') == 9
 
-# Placement-policy checks.
 used_slots = set()
 for p in placements:
-    # The new allocator may place ordinary species earlier than their original
-    # Crystal/Emerald story milestone, but never earlier than placement_phase().
     assert target_phase(p['target_stage']) >= build.placement_phase(p)
-
     assert 1 <= p['min_level'] <= p['max_level'] <= 100
-
-    # Source rarity is retained in the report and the destination slot must use
-    # one of FireRed's real slot weights for that encounter method.
     assert p['source_weight'] > 0
     assert p['weight'] in build.WEIGHTS[p['terrain']]
-
-    # Fishing methods no longer spill into Surf, and Surf/land remain intact.
     assert p['terrain'] == build.WILD[p['source_method']]
+    assert p['original_firered']
+    assert p['original_leafgreen']
+    assert 1 <= p['firered_min_level'] <= p['firered_max_level'] <= 100
+    assert 1 <= p['leafgreen_min_level'] <= p['leafgreen_max_level'] <= 100
 
-    # No two additions may claim the same FireRed encounter slot.
     identity = (p['map'], p['field'], p['slot'])
     assert identity not in used_slots, identity
     used_slots.add(identity)
-
 
 species = {
     name: int(num)
@@ -65,7 +55,7 @@ species = {
         re.M,
     )
 }
-assert species['RALTS'] == 392  # National Dex 280 is NOT the native species ID.
+assert species['RALTS'] == 392
 
 ids = build.map_ids()
 source_tables = json.loads(
@@ -73,7 +63,7 @@ source_tables = json.loads(
 )['wild_encounter_groups'][0]['encounters']
 
 
-def run(runtime_name):
+def run(runtime_name, game):
     lua = importlib.import_module('lupa.' + runtime_name).LuaRuntime(
         unpack_returned_tuples=True
     )
@@ -89,6 +79,7 @@ def run(runtime_name):
         return (ROOT / name).read_text(encoding='utf-8-sig')
 
     lua.globals().read_file = read
+    lua.globals().active_game = game
     lua.execute('package.loaded["src.core.Logger"] = { warn = function() end }')
     lua.execute(
         'package.loaded["src.mods.Merge"] = '
@@ -110,7 +101,6 @@ def run(runtime_name):
         'Catalog = assert(load(read_file("tools/reference/map_catalog.lua")))()'
     )
 
-    # Validate generated IDs against the actual engine's canonical map catalog.
     for p in placements:
         assert lua.eval('Catalog.isKnown')(p['map']), p['map']
 
@@ -121,10 +111,11 @@ def run(runtime_name):
         'fishing_mons': 'fishing',
         'rock_smash_mons': 'rocks',
     }
+    suffix = '_FireRed' if game == 'firered' else '_LeafGreen'
 
     for row in source_tables:
         name = row['map'][4:]
-        if not row['base_label'].endswith('_FireRed') or name not in ids:
+        if not row['base_label'].endswith(suffix) or name not in ids:
             continue
 
         map_id = ids[name]
@@ -155,7 +146,7 @@ def run(runtime_name):
     )
 
     lua.execute(
-        '''
+        """
       pokemon = { _names = names }
       engine = { _tables = native }
       fixtureData = {gen3Pokemon=pokemon, gen3Encounters=engine}
@@ -166,21 +157,30 @@ def run(runtime_name):
         return self.rows[id] or Schemas.gen3View.encounterRecord(engine,id)
       end
       function registry:patch(id, patch)
-        local ok, errors = Schemas.check(Schemas.REGISTRIES.encounters, "encounters",id,patch,"patch",3)
+        local ok, errors = Schemas.check(
+          Schemas.REGISTRIES.encounters, "encounters", id, patch, "patch", 3
+        )
         assert(ok, errors and table.concat(errors,"; "))
         self.rows[id] = Merge.deepMerge(self:get(id),patch)
         self.ops[id] = true
       end
       warnings = {}
-      mod = {content={encounters=registry, pokemon={get=function(_,name)
-          return Schemas.gen3View.speciesNum(pokemon,name)
-        end}}, read=function(_,p) return read_file(p) end,
-        log={warn=function(_,m) warnings[#warnings+1]=m end}}
+      mod = {
+        game={version=active_game},
+        content={
+          encounters=registry,
+          pokemon={get=function(_,name)
+            return Schemas.gen3View.speciesNum(pokemon,name)
+          end}
+        },
+        read=function(_,p) return read_file(p) end,
+        log={warn=function(_,m) warnings[#warnings+1]=m end}
+      }
       function boot() return assert(load(read_file("main.lua")))(mod) end
       boot()
       assert(#warnings==0, table.concat(warnings, "; "))
       Schemas.gen3View.encounterWrite(engine,registry)
-    '''
+        """
     )
 
     g = lua.globals()
@@ -200,8 +200,6 @@ def run(runtime_name):
                 assert after[terrain] is None
                 continue
 
-            # The mod changes species only. Encounter rates, slot counts and
-            # FireRed's original level ranges remain unchanged.
             assert before[terrain]['rate'] == after[terrain]['rate']
             a = before[terrain]['slots']
             b = after[terrain]['slots']
@@ -218,8 +216,8 @@ def run(runtime_name):
         assert lua.eval('function(a,b) return a==b end')(after, g.native[alias])
 
     lua.execute(
-        '''
-      -- Conflicting input must skip a whole map, rather than partially edit it.
+        """
+      -- Conflicting input must skip a whole map.
       engine._tables = Merge.deepCopy(before)
       registry.rows, registry.ops, warnings = {}, {}, {}
       local p = assert(load(read_file("data/placements.lua")))()[1]
@@ -227,32 +225,32 @@ def run(runtime_name):
       boot()
       assert(registry.ops[p.map] == nil and #warnings == 1)
 
-      -- Missing map: warn and keep all other compatible maps working.
+      -- Missing map must warn without mutating that map.
       engine._tables = Merge.deepCopy(before)
       engine._tables[p.map] = nil
       registry.rows, registry.ops, warnings = {}, {}, {}
       boot()
       assert(registry.ops[p.map] == nil and #warnings == 1)
 
-      -- Species preflight aborts before any registry mutation.
+      -- Species preflight aborts before registry mutation.
       registry.rows, registry.ops = {}, {}
       mod.content.pokemon.get = function() return nil end
       assert(not pcall(boot))
       assert(next(registry.ops)==nil)
-    '''
+        """
     )
 
     print(
-        runtime_name
-        + ': 118 species IDs, real schema/merge/write, canonical maps, aliases, '
-        'levels/rates, method preservation, conflict/missing-data checks PASS'
+        f'{runtime_name}/{game}: 118 species IDs, schema/merge/write, canonical '
+        'maps, aliases, levels/rates, edition expectations, conflict checks PASS'
     )
 
 
 for runtime in ('lua54', 'luajit21'):
-    run(runtime)
+    for game in ('firered', 'leafgreen'):
+        run(runtime, game)
 
 print(
-    'Ecology-aware progression, coverage, rarity metadata, unique slots, '
-    'method preservation, evolved-form progression: PASS'
+    'FRLG ecology-aware progression, coverage, rarity metadata, unique slots, '
+    'method preservation, and edition-specific compatibility: PASS'
 )

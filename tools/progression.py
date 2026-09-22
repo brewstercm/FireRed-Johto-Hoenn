@@ -69,7 +69,7 @@ def source_stage(version, location, area, method, species):
 
 
 def target_stage(name):
-    """FireRed's first normal access to a map; water/rod floors applied separately."""
+    """FRLG's first normal access to a map; water/rod floors applied separately."""
     import re
 
     route = re.fullmatch(r'ROUTE(\d+)(?:_NORTH|_SOUTH)?', name)
@@ -106,7 +106,7 @@ def target_stage(name):
 
 
 def habitat(name):
-    """Classify a source or FireRed map into a broad ecological habitat."""
+    """Classify a source or FRLG map into a broad ecological habitat."""
     name = name.lower().replace('_', '-')
 
     if any(s in name for s in ('seafoam', 'shoal', 'ice-path', 'icefall')):

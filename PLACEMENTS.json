@@ -24,7 +24,12 @@
       "target_stage": 0,
       "min_level": 3,
       "max_level": 3,
-      "original": "PIDGEY"
+      "firered_min_level": 3,
+      "firered_max_level": 3,
+      "leafgreen_min_level": 3,
+      "leafgreen_max_level": 3,
+      "original_firered": "PIDGEY",
+      "original_leafgreen": "PIDGEY"
     },
     {
       "dex": 209,
@@ -50,7 +55,12 @@
       "target_stage": 0,
       "min_level": 3,
       "max_level": 3,
-      "original": "RATTATA"
+      "firered_min_level": 3,
+      "firered_max_level": 3,
+      "leafgreen_min_level": 3,
+      "leafgreen_max_level": 3,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 263,
@@ -76,7 +86,12 @@
       "target_stage": 0,
       "min_level": 4,
       "max_level": 4,
-      "original": "PIDGEY"
+      "firered_min_level": 4,
+      "firered_max_level": 4,
+      "leafgreen_min_level": 4,
+      "leafgreen_max_level": 4,
+      "original_firered": "PIDGEY",
+      "original_leafgreen": "PIDGEY"
     },
     {
       "dex": 280,
@@ -102,7 +117,12 @@
       "target_stage": 0,
       "min_level": 4,
       "max_level": 4,
-      "original": "RATTATA"
+      "firered_min_level": 4,
+      "firered_max_level": 4,
+      "leafgreen_min_level": 4,
+      "leafgreen_max_level": 4,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 273,
@@ -128,7 +148,12 @@
       "target_stage": 0,
       "min_level": 4,
       "max_level": 4,
-      "original": "RATTATA"
+      "firered_min_level": 4,
+      "firered_max_level": 4,
+      "leafgreen_min_level": 4,
+      "leafgreen_max_level": 4,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 163,
@@ -154,7 +179,12 @@
       "target_stage": 0,
       "min_level": 3,
       "max_level": 3,
-      "original": "RATTATA"
+      "firered_min_level": 3,
+      "firered_max_level": 3,
+      "leafgreen_min_level": 3,
+      "leafgreen_max_level": 3,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 265,
@@ -180,7 +210,12 @@
       "target_stage": 0,
       "min_level": 3,
       "max_level": 3,
-      "original": "PIDGEY"
+      "firered_min_level": 3,
+      "firered_max_level": 3,
+      "leafgreen_min_level": 3,
+      "leafgreen_max_level": 3,
+      "original_firered": "PIDGEY",
+      "original_leafgreen": "PIDGEY"
     },
     {
       "dex": 190,
@@ -206,7 +241,12 @@
       "target_stage": 0,
       "min_level": 4,
       "max_level": 4,
-      "original": "RATTATA"
+      "firered_min_level": 4,
+      "firered_max_level": 4,
+      "leafgreen_min_level": 4,
+      "leafgreen_max_level": 4,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 276,
@@ -232,7 +272,12 @@
       "target_stage": 0,
       "min_level": 5,
       "max_level": 5,
-      "original": "RATTATA"
+      "firered_min_level": 5,
+      "firered_max_level": 5,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 5,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 300,
@@ -258,7 +303,12 @@
       "target_stage": 0,
       "min_level": 5,
       "max_level": 5,
-      "original": "CATERPIE"
+      "firered_min_level": 5,
+      "firered_max_level": 5,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 5,
+      "original_firered": "CATERPIE",
+      "original_leafgreen": "CATERPIE"
     },
     {
       "dex": 261,
@@ -284,7 +334,12 @@
       "target_stage": 0,
       "min_level": 3,
       "max_level": 3,
-      "original": "RATTATA"
+      "firered_min_level": 3,
+      "firered_max_level": 3,
+      "leafgreen_min_level": 3,
+      "leafgreen_max_level": 3,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 270,
@@ -310,7 +365,12 @@
       "target_stage": 0,
       "min_level": 4,
       "max_level": 4,
-      "original": "RATTATA"
+      "firered_min_level": 4,
+      "firered_max_level": 4,
+      "leafgreen_min_level": 4,
+      "leafgreen_max_level": 4,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 278,
@@ -336,7 +396,12 @@
       "target_stage": 0,
       "min_level": 2,
       "max_level": 2,
-      "original": "RATTATA"
+      "firered_min_level": 2,
+      "firered_max_level": 2,
+      "leafgreen_min_level": 2,
+      "leafgreen_max_level": 2,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 187,
@@ -362,7 +427,12 @@
       "target_stage": 0,
       "min_level": 3,
       "max_level": 3,
-      "original": "SPEAROW"
+      "firered_min_level": 3,
+      "firered_max_level": 3,
+      "leafgreen_min_level": 3,
+      "leafgreen_max_level": 3,
+      "original_firered": "SPEAROW",
+      "original_leafgreen": "SPEAROW"
     },
     {
       "dex": 360,
@@ -388,7 +458,12 @@
       "target_stage": 0,
       "min_level": 5,
       "max_level": 5,
-      "original": "RATTATA"
+      "firered_min_level": 5,
+      "firered_max_level": 5,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 5,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 165,
@@ -414,7 +489,12 @@
       "target_stage": 0,
       "min_level": 4,
       "max_level": 4,
-      "original": "CATERPIE"
+      "firered_min_level": 4,
+      "firered_max_level": 4,
+      "leafgreen_min_level": 4,
+      "leafgreen_max_level": 4,
+      "original_firered": "CATERPIE",
+      "original_leafgreen": "CATERPIE"
     },
     {
       "dex": 167,
@@ -440,7 +520,12 @@
       "target_stage": 0,
       "min_level": 4,
       "max_level": 4,
-      "original": "WEEDLE"
+      "firered_min_level": 4,
+      "firered_max_level": 4,
+      "leafgreen_min_level": 4,
+      "leafgreen_max_level": 4,
+      "original_firered": "WEEDLE",
+      "original_leafgreen": "WEEDLE"
     },
     {
       "dex": 204,
@@ -466,7 +551,12 @@
       "target_stage": 0,
       "min_level": 5,
       "max_level": 5,
-      "original": "CATERPIE"
+      "firered_min_level": 5,
+      "firered_max_level": 5,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 5,
+      "original_firered": "CATERPIE",
+      "original_leafgreen": "CATERPIE"
     },
     {
       "dex": 214,
@@ -492,7 +582,12 @@
       "target_stage": 0,
       "min_level": 5,
       "max_level": 5,
-      "original": "WEEDLE"
+      "firered_min_level": 5,
+      "firered_max_level": 5,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 5,
+      "original_firered": "WEEDLE",
+      "original_leafgreen": "WEEDLE"
     },
     {
       "dex": 266,
@@ -518,7 +613,12 @@
       "target_stage": 0,
       "min_level": 3,
       "max_level": 3,
-      "original": "CATERPIE"
+      "firered_min_level": 3,
+      "firered_max_level": 3,
+      "leafgreen_min_level": 3,
+      "leafgreen_max_level": 3,
+      "original_firered": "CATERPIE",
+      "original_leafgreen": "CATERPIE"
     },
     {
       "dex": 268,
@@ -544,7 +644,12 @@
       "target_stage": 0,
       "min_level": 3,
       "max_level": 3,
-      "original": "WEEDLE"
+      "firered_min_level": 3,
+      "firered_max_level": 3,
+      "leafgreen_min_level": 3,
+      "leafgreen_max_level": 3,
+      "original_firered": "WEEDLE",
+      "original_leafgreen": "WEEDLE"
     },
     {
       "dex": 285,
@@ -570,7 +675,12 @@
       "target_stage": 0,
       "min_level": 5,
       "max_level": 5,
-      "original": "METAPOD"
+      "firered_min_level": 5,
+      "firered_max_level": 5,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 5,
+      "original_firered": "METAPOD",
+      "original_leafgreen": "KAKUNA"
     },
     {
       "dex": 290,
@@ -596,7 +706,12 @@
       "target_stage": 0,
       "min_level": 5,
       "max_level": 5,
-      "original": "KAKUNA"
+      "firered_min_level": 5,
+      "firered_max_level": 5,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 5,
+      "original_firered": "KAKUNA",
+      "original_leafgreen": "METAPOD"
     },
     {
       "dex": 287,
@@ -622,7 +737,12 @@
       "target_stage": 0,
       "min_level": 4,
       "max_level": 4,
-      "original": "KAKUNA"
+      "firered_min_level": 4,
+      "firered_max_level": 4,
+      "leafgreen_min_level": 4,
+      "leafgreen_max_level": 4,
+      "original_firered": "KAKUNA",
+      "original_leafgreen": "METAPOD"
     },
     {
       "dex": 201,
@@ -648,33 +768,12 @@
       "target_stage": 1,
       "min_level": 7,
       "max_level": 7,
-      "original": "ZUBAT"
-    },
-    {
-      "dex": 296,
-      "species": "MAKUHITA",
-      "version": "emerald",
-      "source_location": "granite-cave",
-      "source_area": "1f",
-      "source_method": "walk",
-      "source_stage": 1,
-      "source_min": 6,
-      "source_max": 6,
-      "source_weight": 5,
-      "source_conditions": "",
-      "source_encounter_id": 29907,
-      "terrain": "land",
-      "habitat": "cave",
-      "evolved": false,
-      "map": "FR_MT_MOON_1F",
-      "map_name": "MT_MOON_1F",
-      "field": "land",
-      "slot": 8,
-      "weight": 5,
-      "target_stage": 1,
-      "min_level": 8,
-      "max_level": 8,
-      "original": "PARAS"
+      "firered_min_level": 7,
+      "firered_max_level": 7,
+      "leafgreen_min_level": 7,
+      "leafgreen_max_level": 7,
+      "original_firered": "ZUBAT",
+      "original_leafgreen": "ZUBAT"
     },
     {
       "dex": 304,
@@ -700,7 +799,74 @@
       "target_stage": 1,
       "min_level": 7,
       "max_level": 7,
-      "original": "ZUBAT"
+      "firered_min_level": 7,
+      "firered_max_level": 7,
+      "leafgreen_min_level": 7,
+      "leafgreen_max_level": 7,
+      "original_firered": "ZUBAT",
+      "original_leafgreen": "ZUBAT"
+    },
+    {
+      "dex": 206,
+      "species": "DUNSPARCE",
+      "version": "crystal",
+      "source_location": "dark-cave",
+      "source_area": "violet-city-entrance",
+      "source_method": "walk",
+      "source_stage": 0,
+      "source_min": 4,
+      "source_max": 4,
+      "source_weight": 1,
+      "source_conditions": "swarm-no,time-day",
+      "source_encounter_id": 55327,
+      "terrain": "land",
+      "habitat": "cave",
+      "evolved": false,
+      "map": "FR_MT_MOON_1F",
+      "map_name": "MT_MOON_1F",
+      "field": "land",
+      "slot": 11,
+      "weight": 1,
+      "target_stage": 1,
+      "min_level": 7,
+      "max_level": 7,
+      "firered_min_level": 7,
+      "firered_max_level": 7,
+      "leafgreen_min_level": 7,
+      "leafgreen_max_level": 7,
+      "original_firered": "ZUBAT",
+      "original_leafgreen": "ZUBAT"
+    },
+    {
+      "dex": 293,
+      "species": "WHISMUR",
+      "version": "emerald",
+      "source_location": "rusturf-tunnel",
+      "source_area": "",
+      "source_method": "walk",
+      "source_stage": 0,
+      "source_min": 5,
+      "source_max": 5,
+      "source_weight": 5,
+      "source_conditions": "",
+      "source_encounter_id": 29894,
+      "terrain": "land",
+      "habitat": "cave",
+      "evolved": false,
+      "map": "FR_MT_MOON_B1F",
+      "map_name": "MT_MOON_B1F",
+      "field": "land",
+      "slot": 7,
+      "weight": 5,
+      "target_stage": 1,
+      "min_level": 7,
+      "max_level": 7,
+      "firered_min_level": 7,
+      "firered_max_level": 7,
+      "leafgreen_min_level": 7,
+      "leafgreen_max_level": 7,
+      "original_firered": "PARAS",
+      "original_leafgreen": "PARAS"
     },
     {
       "dex": 216,
@@ -721,64 +887,17 @@
       "map": "FR_MT_MOON_B1F",
       "map_name": "MT_MOON_B1F",
       "field": "land",
-      "slot": 7,
-      "weight": 5,
+      "slot": 9,
+      "weight": 4,
       "target_stage": 1,
-      "min_level": 7,
-      "max_level": 7,
-      "original": "PARAS"
-    },
-    {
-      "dex": 206,
-      "species": "DUNSPARCE",
-      "version": "crystal",
-      "source_location": "dark-cave",
-      "source_area": "violet-city-entrance",
-      "source_method": "walk",
-      "source_stage": 0,
-      "source_min": 4,
-      "source_max": 4,
-      "source_weight": 1,
-      "source_conditions": "swarm-no,time-day",
-      "source_encounter_id": 55327,
-      "terrain": "land",
-      "habitat": "cave",
-      "evolved": false,
-      "map": "FR_MT_MOON_B1F",
-      "map_name": "MT_MOON_B1F",
-      "field": "land",
-      "slot": 11,
-      "weight": 1,
-      "target_stage": 1,
-      "min_level": 9,
-      "max_level": 9,
-      "original": "PARAS"
-    },
-    {
-      "dex": 293,
-      "species": "WHISMUR",
-      "version": "emerald",
-      "source_location": "rusturf-tunnel",
-      "source_area": "",
-      "source_method": "walk",
-      "source_stage": 0,
-      "source_min": 5,
-      "source_max": 5,
-      "source_weight": 5,
-      "source_conditions": "",
-      "source_encounter_id": 29894,
-      "terrain": "land",
-      "habitat": "cave",
-      "evolved": false,
-      "map": "FR_MT_MOON_B2F",
-      "map_name": "MT_MOON_B2F",
-      "field": "land",
-      "slot": 8,
-      "weight": 5,
-      "target_stage": 1,
-      "min_level": 10,
-      "max_level": 10,
-      "original": "CLEFAIRY"
+      "min_level": 5,
+      "max_level": 5,
+      "firered_min_level": 5,
+      "firered_max_level": 5,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 5,
+      "original_firered": "PARAS",
+      "original_leafgreen": "PARAS"
     },
     {
       "dex": 302,
@@ -796,15 +915,51 @@
       "terrain": "land",
       "habitat": "cave",
       "evolved": false,
-      "map": "FR_MT_MOON_B2F",
-      "map_name": "MT_MOON_B2F",
+      "map": "FR_MT_MOON_B1F",
+      "map_name": "MT_MOON_B1F",
       "field": "land",
       "slot": 11,
       "weight": 1,
       "target_stage": 1,
-      "min_level": 11,
-      "max_level": 11,
-      "original": "ZUBAT"
+      "min_level": 9,
+      "max_level": 9,
+      "firered_min_level": 9,
+      "firered_max_level": 9,
+      "leafgreen_min_level": 9,
+      "leafgreen_max_level": 9,
+      "original_firered": "PARAS",
+      "original_leafgreen": "PARAS"
+    },
+    {
+      "dex": 296,
+      "species": "MAKUHITA",
+      "version": "emerald",
+      "source_location": "granite-cave",
+      "source_area": "1f",
+      "source_method": "walk",
+      "source_stage": 1,
+      "source_min": 6,
+      "source_max": 6,
+      "source_weight": 5,
+      "source_conditions": "",
+      "source_encounter_id": 29907,
+      "terrain": "land",
+      "habitat": "cave",
+      "evolved": false,
+      "map": "FR_MT_MOON_B2F",
+      "map_name": "MT_MOON_B2F",
+      "field": "land",
+      "slot": 8,
+      "weight": 5,
+      "target_stage": 1,
+      "min_level": 10,
+      "max_level": 10,
+      "firered_min_level": 10,
+      "firered_max_level": 10,
+      "leafgreen_min_level": 10,
+      "leafgreen_max_level": 10,
+      "original_firered": "CLEFAIRY",
+      "original_leafgreen": "CLEFAIRY"
     },
     {
       "dex": 231,
@@ -830,7 +985,12 @@
       "target_stage": 1,
       "min_level": 3,
       "max_level": 3,
-      "original": "JIGGLYPUFF"
+      "firered_min_level": 3,
+      "firered_max_level": 3,
+      "leafgreen_min_level": 3,
+      "leafgreen_max_level": 3,
+      "original_firered": "JIGGLYPUFF",
+      "original_leafgreen": "JIGGLYPUFF"
     },
     {
       "dex": 299,
@@ -856,7 +1016,12 @@
       "target_stage": 1,
       "min_level": 10,
       "max_level": 10,
-      "original": "SPEAROW"
+      "firered_min_level": 10,
+      "firered_max_level": 10,
+      "leafgreen_min_level": 10,
+      "leafgreen_max_level": 10,
+      "original_firered": "SPEAROW",
+      "original_leafgreen": "SPEAROW"
     },
     {
       "dex": 213,
@@ -882,33 +1047,12 @@
       "target_stage": 2,
       "min_level": 15,
       "max_level": 15,
-      "original": "DIGLETT"
-    },
-    {
-      "dex": 312,
-      "species": "MINUN",
-      "version": "emerald",
-      "source_location": "hoenn-route-110",
-      "source_area": "",
-      "source_method": "walk",
-      "source_stage": 2,
-      "source_min": 13,
-      "source_max": 13,
-      "source_weight": 10,
-      "source_conditions": "",
-      "source_encounter_id": 29694,
-      "terrain": "land",
-      "habitat": "field",
-      "evolved": false,
-      "map": "FR_ROUTE_24",
-      "map_name": "ROUTE24",
-      "field": "land",
-      "slot": 5,
-      "weight": 10,
-      "target_stage": 2,
-      "min_level": 13,
-      "max_level": 13,
-      "original": "ODDISH"
+      "firered_min_level": 15,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 15,
+      "leafgreen_max_level": 15,
+      "original_firered": "DIGLETT",
+      "original_leafgreen": "DIGLETT"
     },
     {
       "dex": 241,
@@ -934,7 +1078,12 @@
       "target_stage": 2,
       "min_level": 13,
       "max_level": 13,
-      "original": "PIDGEY"
+      "firered_min_level": 13,
+      "firered_max_level": 13,
+      "leafgreen_min_level": 13,
+      "leafgreen_max_level": 13,
+      "original_firered": "PIDGEY",
+      "original_leafgreen": "PIDGEY"
     },
     {
       "dex": 166,
@@ -960,11 +1109,16 @@
       "target_stage": 2,
       "min_level": 8,
       "max_level": 8,
-      "original": "KAKUNA"
+      "firered_min_level": 8,
+      "firered_max_level": 8,
+      "leafgreen_min_level": 8,
+      "leafgreen_max_level": 8,
+      "original_firered": "KAKUNA",
+      "original_leafgreen": "METAPOD"
     },
     {
-      "dex": 309,
-      "species": "ELECTRIKE",
+      "dex": 311,
+      "species": "PLUSLE",
       "version": "emerald",
       "source_location": "hoenn-route-110",
       "source_area": "",
@@ -972,21 +1126,57 @@
       "source_stage": 2,
       "source_min": 12,
       "source_max": 12,
-      "source_weight": 20,
+      "source_weight": 1,
       "source_conditions": "",
-      "source_encounter_id": 29691,
+      "source_encounter_id": 29700,
+      "terrain": "land",
+      "habitat": "field",
+      "evolved": false,
+      "map": "FR_ROUTE_24",
+      "map_name": "ROUTE24",
+      "field": "land",
+      "slot": 12,
+      "weight": 1,
+      "target_stage": 2,
+      "min_level": 12,
+      "max_level": 12,
+      "firered_min_level": 12,
+      "firered_max_level": 12,
+      "leafgreen_min_level": 12,
+      "leafgreen_max_level": 12,
+      "original_firered": "ABRA",
+      "original_leafgreen": "ABRA"
+    },
+    {
+      "dex": 312,
+      "species": "MINUN",
+      "version": "emerald",
+      "source_location": "hoenn-route-110",
+      "source_area": "",
+      "source_method": "walk",
+      "source_stage": 2,
+      "source_min": 13,
+      "source_max": 13,
+      "source_weight": 10,
+      "source_conditions": "",
+      "source_encounter_id": 29694,
       "terrain": "land",
       "habitat": "field",
       "evolved": false,
       "map": "FR_ROUTE_25",
       "map_name": "ROUTE25",
       "field": "land",
-      "slot": 1,
-      "weight": 20,
+      "slot": 3,
+      "weight": 10,
       "target_stage": 2,
-      "min_level": 8,
-      "max_level": 8,
-      "original": "WEEDLE"
+      "min_level": 13,
+      "max_level": 13,
+      "firered_min_level": 13,
+      "firered_max_level": 13,
+      "leafgreen_min_level": 13,
+      "leafgreen_max_level": 13,
+      "original_firered": "PIDGEY",
+      "original_leafgreen": "PIDGEY"
     },
     {
       "dex": 314,
@@ -1012,7 +1202,12 @@
       "target_stage": 2,
       "min_level": 12,
       "max_level": 12,
-      "original": "ODDISH"
+      "firered_min_level": 12,
+      "firered_max_level": 12,
+      "leafgreen_min_level": 12,
+      "leafgreen_max_level": 12,
+      "original_firered": "ODDISH",
+      "original_leafgreen": "BELLSPROUT"
     },
     {
       "dex": 193,
@@ -1038,21 +1233,26 @@
       "target_stage": 2,
       "min_level": 13,
       "max_level": 13,
-      "original": "ABRA"
+      "firered_min_level": 13,
+      "firered_max_level": 13,
+      "leafgreen_min_level": 13,
+      "leafgreen_max_level": 13,
+      "original_firered": "ABRA",
+      "original_leafgreen": "ABRA"
     },
     {
-      "dex": 177,
-      "species": "NATU",
+      "dex": 234,
+      "species": "STANTLER",
       "version": "crystal",
-      "source_location": "ruins-of-alph",
-      "source_area": "outside",
+      "source_location": "johto-route-37",
+      "source_area": "",
       "source_method": "walk",
-      "source_stage": 4,
-      "source_min": 18,
-      "source_max": 18,
-      "source_weight": 20,
-      "source_conditions": "time-day",
-      "source_encounter_id": 56758,
+      "source_stage": 3,
+      "source_min": 14,
+      "source_max": 14,
+      "source_weight": 30,
+      "source_conditions": "time-night",
+      "source_encounter_id": 56456,
       "terrain": "land",
       "habitat": "field",
       "evolved": false,
@@ -1064,7 +1264,12 @@
       "target_stage": 2,
       "min_level": 13,
       "max_level": 13,
-      "original": "PIDGEY"
+      "firered_min_level": 13,
+      "firered_max_level": 13,
+      "leafgreen_min_level": 13,
+      "leafgreen_max_level": 13,
+      "original_firered": "PIDGEY",
+      "original_leafgreen": "PIDGEY"
     },
     {
       "dex": 235,
@@ -1090,7 +1295,12 @@
       "target_stage": 2,
       "min_level": 16,
       "max_level": 16,
-      "original": "ODDISH"
+      "firered_min_level": 16,
+      "firered_max_level": 16,
+      "leafgreen_min_level": 16,
+      "leafgreen_max_level": 16,
+      "original_firered": "ODDISH",
+      "original_leafgreen": "BELLSPROUT"
     },
     {
       "dex": 313,
@@ -1116,7 +1326,12 @@
       "target_stage": 2,
       "min_level": 15,
       "max_level": 15,
-      "original": "PIDGEY"
+      "firered_min_level": 15,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 15,
+      "leafgreen_max_level": 15,
+      "original_firered": "PIDGEY",
+      "original_leafgreen": "PIDGEY"
     },
     {
       "dex": 194,
@@ -1142,7 +1357,12 @@
       "target_stage": 2,
       "min_level": 16,
       "max_level": 16,
-      "original": "ODDISH"
+      "firered_min_level": 16,
+      "firered_max_level": 16,
+      "leafgreen_min_level": 16,
+      "leafgreen_max_level": 16,
+      "original_firered": "ODDISH",
+      "original_leafgreen": "BELLSPROUT"
     },
     {
       "dex": 338,
@@ -1168,7 +1388,12 @@
       "target_stage": 3,
       "min_level": 13,
       "max_level": 13,
-      "original": "ONIX"
+      "firered_min_level": 13,
+      "firered_max_level": 13,
+      "leafgreen_min_level": 13,
+      "leafgreen_max_level": 13,
+      "original_firered": "ONIX",
+      "original_leafgreen": "ONIX"
     },
     {
       "dex": 271,
@@ -1194,7 +1419,12 @@
       "target_stage": 3,
       "min_level": 15,
       "max_level": 15,
-      "original": "EKANS"
+      "firered_min_level": 15,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 15,
+      "leafgreen_max_level": 15,
+      "original_firered": "EKANS",
+      "original_leafgreen": "SANDSHREW"
     },
     {
       "dex": 327,
@@ -1220,7 +1450,12 @@
       "target_stage": 3,
       "min_level": 14,
       "max_level": 14,
-      "original": "VOLTORB"
+      "firered_min_level": 14,
+      "firered_max_level": 14,
+      "leafgreen_min_level": 14,
+      "leafgreen_max_level": 14,
+      "original_firered": "VOLTORB",
+      "original_leafgreen": "VOLTORB"
     },
     {
       "dex": 331,
@@ -1246,7 +1481,12 @@
       "target_stage": 3,
       "min_level": 17,
       "max_level": 17,
-      "original": "SPEAROW"
+      "firered_min_level": 17,
+      "firered_max_level": 17,
+      "leafgreen_min_level": 17,
+      "leafgreen_max_level": 17,
+      "original_firered": "SPEAROW",
+      "original_leafgreen": "SPEAROW"
     },
     {
       "dex": 336,
@@ -1272,21 +1512,26 @@
       "target_stage": 3,
       "min_level": 14,
       "max_level": 14,
-      "original": "VOLTORB"
+      "firered_min_level": 14,
+      "firered_max_level": 14,
+      "leafgreen_min_level": 14,
+      "leafgreen_max_level": 14,
+      "original_firered": "VOLTORB",
+      "original_leafgreen": "VOLTORB"
     },
     {
-      "dex": 234,
-      "species": "STANTLER",
-      "version": "crystal",
-      "source_location": "johto-route-37",
+      "dex": 309,
+      "species": "ELECTRIKE",
+      "version": "emerald",
+      "source_location": "hoenn-route-110",
       "source_area": "",
       "source_method": "walk",
-      "source_stage": 3,
-      "source_min": 14,
-      "source_max": 14,
-      "source_weight": 30,
-      "source_conditions": "time-night",
-      "source_encounter_id": 56456,
+      "source_stage": 2,
+      "source_min": 12,
+      "source_max": 12,
+      "source_weight": 20,
+      "source_conditions": "",
+      "source_encounter_id": 29691,
       "terrain": "land",
       "habitat": "field",
       "evolved": false,
@@ -1298,7 +1543,43 @@
       "target_stage": 3,
       "min_level": 14,
       "max_level": 14,
-      "original": "EKANS"
+      "firered_min_level": 14,
+      "firered_max_level": 14,
+      "leafgreen_min_level": 14,
+      "leafgreen_max_level": 14,
+      "original_firered": "EKANS",
+      "original_leafgreen": "SANDSHREW"
+    },
+    {
+      "dex": 177,
+      "species": "NATU",
+      "version": "crystal",
+      "source_location": "ruins-of-alph",
+      "source_area": "outside",
+      "source_method": "walk",
+      "source_stage": 4,
+      "source_min": 18,
+      "source_max": 18,
+      "source_weight": 20,
+      "source_conditions": "time-day",
+      "source_encounter_id": 56758,
+      "terrain": "land",
+      "habitat": "field",
+      "evolved": false,
+      "map": "FR_ROUTE_11",
+      "map_name": "ROUTE11",
+      "field": "land",
+      "slot": 2,
+      "weight": 20,
+      "target_stage": 3,
+      "min_level": 15,
+      "max_level": 15,
+      "firered_min_level": 15,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 15,
+      "leafgreen_max_level": 15,
+      "original_firered": "SPEAROW",
+      "original_leafgreen": "SPEAROW"
     },
     {
       "dex": 316,
@@ -1324,7 +1605,12 @@
       "target_stage": 3,
       "min_level": 12,
       "max_level": 12,
-      "original": "EKANS"
+      "firered_min_level": 12,
+      "firered_max_level": 12,
+      "leafgreen_min_level": 12,
+      "leafgreen_max_level": 12,
+      "original_firered": "EKANS",
+      "original_leafgreen": "SANDSHREW"
     },
     {
       "dex": 168,
@@ -1350,33 +1636,12 @@
       "target_stage": 3,
       "min_level": 15,
       "max_level": 15,
-      "original": "DROWZEE"
-    },
-    {
-      "dex": 311,
-      "species": "PLUSLE",
-      "version": "emerald",
-      "source_location": "hoenn-route-110",
-      "source_area": "",
-      "source_method": "walk",
-      "source_stage": 2,
-      "source_min": 12,
-      "source_max": 12,
-      "source_weight": 1,
-      "source_conditions": "",
-      "source_encounter_id": 29700,
-      "terrain": "land",
-      "habitat": "field",
-      "evolved": false,
-      "map": "FR_ROUTE_11",
-      "map_name": "ROUTE11",
-      "field": "land",
-      "slot": 11,
-      "weight": 1,
-      "target_stage": 3,
-      "min_level": 12,
-      "max_level": 12,
-      "original": "EKANS"
+      "firered_min_level": 15,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 15,
+      "leafgreen_max_level": 15,
+      "original_firered": "DROWZEE",
+      "original_leafgreen": "DROWZEE"
     },
     {
       "dex": 333,
@@ -1402,7 +1667,12 @@
       "target_stage": 3,
       "min_level": 15,
       "max_level": 15,
-      "original": "EKANS"
+      "firered_min_level": 15,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 15,
+      "leafgreen_max_level": 15,
+      "original_firered": "EKANS",
+      "original_leafgreen": "SANDSHREW"
     },
     {
       "dex": 343,
@@ -1428,7 +1698,12 @@
       "target_stage": 3,
       "min_level": 14,
       "max_level": 14,
-      "original": "RATTATA"
+      "firered_min_level": 14,
+      "firered_max_level": 14,
+      "leafgreen_min_level": 14,
+      "leafgreen_max_level": 14,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 328,
@@ -1454,7 +1729,12 @@
       "target_stage": 3,
       "min_level": 17,
       "max_level": 17,
-      "original": "SPEAROW"
+      "firered_min_level": 17,
+      "firered_max_level": 17,
+      "leafgreen_min_level": 17,
+      "leafgreen_max_level": 17,
+      "original_firered": "SPEAROW",
+      "original_leafgreen": "SPEAROW"
     },
     {
       "dex": 274,
@@ -1480,7 +1760,12 @@
       "target_stage": 3,
       "min_level": 14,
       "max_level": 14,
-      "original": "RATTATA"
+      "firered_min_level": 14,
+      "firered_max_level": 14,
+      "leafgreen_min_level": 14,
+      "leafgreen_max_level": 14,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 353,
@@ -1506,7 +1791,12 @@
       "target_stage": 4,
       "min_level": 21,
       "max_level": 21,
-      "original": "HAUNTER"
+      "firered_min_level": 21,
+      "firered_max_level": 21,
+      "leafgreen_min_level": 21,
+      "leafgreen_max_level": 21,
+      "original_firered": "HAUNTER",
+      "original_leafgreen": "HAUNTER"
     },
     {
       "dex": 358,
@@ -1532,7 +1822,12 @@
       "target_stage": 4,
       "min_level": 23,
       "max_level": 23,
-      "original": "HAUNTER"
+      "firered_min_level": 23,
+      "firered_max_level": 23,
+      "leafgreen_min_level": 23,
+      "leafgreen_max_level": 23,
+      "original_firered": "HAUNTER",
+      "original_leafgreen": "HAUNTER"
     },
     {
       "dex": 355,
@@ -1558,7 +1853,12 @@
       "target_stage": 4,
       "min_level": 25,
       "max_level": 25,
-      "original": "HAUNTER"
+      "firered_min_level": 25,
+      "firered_max_level": 25,
+      "leafgreen_min_level": 25,
+      "leafgreen_max_level": 25,
+      "original_firered": "HAUNTER",
+      "original_leafgreen": "HAUNTER"
     },
     {
       "dex": 339,
@@ -1584,7 +1884,12 @@
       "target_stage": 4,
       "min_level": 5,
       "max_level": 15,
-      "original": "MAGIKARP"
+      "firered_min_level": 5,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 15,
+      "original_firered": "MAGIKARP",
+      "original_leafgreen": "MAGIKARP"
     },
     {
       "dex": 183,
@@ -1610,7 +1915,12 @@
       "target_stage": 4,
       "min_level": 24,
       "max_level": 24,
-      "original": "ODDISH"
+      "firered_min_level": 24,
+      "firered_max_level": 24,
+      "leafgreen_min_level": 24,
+      "leafgreen_max_level": 24,
+      "original_firered": "ODDISH",
+      "original_leafgreen": "BELLSPROUT"
     },
     {
       "dex": 264,
@@ -1636,7 +1946,12 @@
       "target_stage": 4,
       "min_level": 24,
       "max_level": 24,
-      "original": "VENONAT"
+      "firered_min_level": 24,
+      "firered_max_level": 24,
+      "leafgreen_min_level": 24,
+      "leafgreen_max_level": 24,
+      "original_firered": "VENONAT",
+      "original_leafgreen": "VENONAT"
     },
     {
       "dex": 359,
@@ -1662,7 +1977,12 @@
       "target_stage": 4,
       "min_level": 23,
       "max_level": 23,
-      "original": "PIDGEY"
+      "firered_min_level": 23,
+      "firered_max_level": 23,
+      "leafgreen_min_level": 23,
+      "leafgreen_max_level": 23,
+      "original_firered": "PIDGEY",
+      "original_leafgreen": "PIDGEY"
     },
     {
       "dex": 352,
@@ -1688,7 +2008,12 @@
       "target_stage": 4,
       "min_level": 23,
       "max_level": 23,
-      "original": "PIDGEY"
+      "firered_min_level": 23,
+      "firered_max_level": 23,
+      "leafgreen_min_level": 23,
+      "leafgreen_max_level": 23,
+      "original_firered": "PIDGEY",
+      "original_leafgreen": "PIDGEY"
     },
     {
       "dex": 349,
@@ -1714,7 +2039,12 @@
       "target_stage": 4,
       "min_level": 5,
       "max_level": 15,
-      "original": "HORSEA"
+      "firered_min_level": 5,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 15,
+      "original_firered": "HORSEA",
+      "original_leafgreen": "KRABBY"
     },
     {
       "dex": 341,
@@ -1740,7 +2070,12 @@
       "target_stage": 4,
       "min_level": 5,
       "max_level": 15,
-      "original": "MAGIKARP"
+      "firered_min_level": 5,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 15,
+      "original_firered": "MAGIKARP",
+      "original_leafgreen": "MAGIKARP"
     },
     {
       "dex": 262,
@@ -1766,7 +2101,12 @@
       "target_stage": 4,
       "min_level": 24,
       "max_level": 24,
-      "original": "ODDISH"
+      "firered_min_level": 24,
+      "firered_max_level": 24,
+      "leafgreen_min_level": 24,
+      "leafgreen_max_level": 24,
+      "original_firered": "ODDISH",
+      "original_leafgreen": "BELLSPROUT"
     },
     {
       "dex": 310,
@@ -1792,7 +2132,12 @@
       "target_stage": 4,
       "min_level": 26,
       "max_level": 26,
-      "original": "VENONAT"
+      "firered_min_level": 26,
+      "firered_max_level": 26,
+      "leafgreen_min_level": 26,
+      "leafgreen_max_level": 26,
+      "original_firered": "VENONAT",
+      "original_leafgreen": "VENONAT"
     },
     {
       "dex": 357,
@@ -1818,7 +2163,12 @@
       "target_stage": 4,
       "min_level": 25,
       "max_level": 25,
-      "original": "DITTO"
+      "firered_min_level": 25,
+      "firered_max_level": 25,
+      "leafgreen_min_level": 25,
+      "leafgreen_max_level": 25,
+      "original_firered": "DITTO",
+      "original_leafgreen": "DITTO"
     },
     {
       "dex": 162,
@@ -1844,7 +2194,12 @@
       "target_stage": 4,
       "min_level": 22,
       "max_level": 22,
-      "original": "ODDISH"
+      "firered_min_level": 22,
+      "firered_max_level": 22,
+      "leafgreen_min_level": 22,
+      "leafgreen_max_level": 22,
+      "original_firered": "ODDISH",
+      "original_leafgreen": "BELLSPROUT"
     },
     {
       "dex": 277,
@@ -1870,7 +2225,12 @@
       "target_stage": 4,
       "min_level": 25,
       "max_level": 25,
-      "original": "PIDGEY"
+      "firered_min_level": 25,
+      "firered_max_level": 25,
+      "leafgreen_min_level": 25,
+      "leafgreen_max_level": 25,
+      "original_firered": "PIDGEY",
+      "original_leafgreen": "PIDGEY"
     },
     {
       "dex": 228,
@@ -1896,7 +2256,12 @@
       "target_stage": 4,
       "min_level": 18,
       "max_level": 18,
-      "original": "DODUO"
+      "firered_min_level": 18,
+      "firered_max_level": 18,
+      "leafgreen_min_level": 18,
+      "leafgreen_max_level": 18,
+      "original_firered": "DODUO",
+      "original_leafgreen": "DODUO"
     },
     {
       "dex": 210,
@@ -1922,7 +2287,12 @@
       "target_stage": 4,
       "min_level": 22,
       "max_level": 22,
-      "original": "RATTATA"
+      "firered_min_level": 22,
+      "firered_max_level": 22,
+      "leafgreen_min_level": 22,
+      "leafgreen_max_level": 22,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 318,
@@ -1948,7 +2318,12 @@
       "target_stage": 4,
       "min_level": 5,
       "max_level": 15,
-      "original": "MAGIKARP"
+      "firered_min_level": 5,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 15,
+      "original_firered": "MAGIKARP",
+      "original_leafgreen": "MAGIKARP"
     },
     {
       "dex": 198,
@@ -1974,7 +2349,12 @@
       "target_stage": 4,
       "min_level": 17,
       "max_level": 17,
-      "original": "MEOWTH"
+      "firered_min_level": 17,
+      "firered_max_level": 17,
+      "leafgreen_min_level": 17,
+      "leafgreen_max_level": 17,
+      "original_firered": "MEOWTH",
+      "original_leafgreen": "MEOWTH"
     },
     {
       "dex": 340,
@@ -1995,12 +2375,17 @@
       "map": "FR_CINNABAR_ISLAND",
       "map_name": "CINNABAR_ISLAND",
       "field": "fishing",
-      "slot": 8,
-      "weight": 15,
+      "slot": 9,
+      "weight": 4,
       "target_stage": 5,
-      "min_level": 15,
-      "max_level": 25,
-      "original": "GYARADOS"
+      "min_level": 25,
+      "max_level": 35,
+      "firered_min_level": 25,
+      "firered_max_level": 35,
+      "leafgreen_min_level": 25,
+      "leafgreen_max_level": 35,
+      "original_firered": "SEADRA",
+      "original_leafgreen": "SLOWBRO"
     },
     {
       "dex": 218,
@@ -2026,7 +2411,12 @@
       "target_stage": 5,
       "min_level": 28,
       "max_level": 28,
-      "original": "GRIMER"
+      "firered_min_level": 28,
+      "firered_max_level": 28,
+      "leafgreen_min_level": 28,
+      "leafgreen_max_level": 28,
+      "original_firered": "GRIMER",
+      "original_leafgreen": "KOFFING"
     },
     {
       "dex": 322,
@@ -2052,7 +2442,12 @@
       "target_stage": 5,
       "min_level": 28,
       "max_level": 28,
-      "original": "RATTATA"
+      "firered_min_level": 28,
+      "firered_max_level": 28,
+      "leafgreen_min_level": 28,
+      "leafgreen_max_level": 28,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 324,
@@ -2078,7 +2473,12 @@
       "target_stage": 5,
       "min_level": 26,
       "max_level": 26,
-      "original": "RATTATA"
+      "firered_min_level": 26,
+      "firered_max_level": 26,
+      "leafgreen_min_level": 26,
+      "leafgreen_max_level": 26,
+      "original_firered": "RATTATA",
+      "original_leafgreen": "RATTATA"
     },
     {
       "dex": 195,
@@ -2104,7 +2504,12 @@
       "target_stage": 5,
       "min_level": 20,
       "max_level": 30,
-      "original": "TENTACOOL"
+      "firered_min_level": 20,
+      "firered_max_level": 30,
+      "leafgreen_min_level": 20,
+      "leafgreen_max_level": 30,
+      "original_firered": "TENTACOOL",
+      "original_leafgreen": "TENTACOOL"
     },
     {
       "dex": 320,
@@ -2130,7 +2535,12 @@
       "target_stage": 5,
       "min_level": 5,
       "max_level": 15,
-      "original": "MAGIKARP"
+      "firered_min_level": 5,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 15,
+      "original_firered": "MAGIKARP",
+      "original_leafgreen": "MAGIKARP"
     },
     {
       "dex": 211,
@@ -2156,7 +2566,12 @@
       "target_stage": 5,
       "min_level": 25,
       "max_level": 35,
-      "original": "SEADRA"
+      "firered_min_level": 25,
+      "firered_max_level": 35,
+      "leafgreen_min_level": 25,
+      "leafgreen_max_level": 35,
+      "original_firered": "SEADRA",
+      "original_leafgreen": "KINGLER"
     },
     {
       "dex": 226,
@@ -2182,7 +2597,12 @@
       "target_stage": 5,
       "min_level": 20,
       "max_level": 30,
-      "original": "TENTACOOL"
+      "firered_min_level": 20,
+      "firered_max_level": 30,
+      "leafgreen_min_level": 20,
+      "leafgreen_max_level": 30,
+      "original_firered": "TENTACOOL",
+      "original_leafgreen": "TENTACOOL"
     },
     {
       "dex": 369,
@@ -2208,7 +2628,12 @@
       "target_stage": 5,
       "min_level": 30,
       "max_level": 35,
-      "original": "TENTACOOL"
+      "firered_min_level": 30,
+      "firered_max_level": 35,
+      "leafgreen_min_level": 30,
+      "leafgreen_max_level": 35,
+      "original_firered": "TENTACOOL",
+      "original_leafgreen": "TENTACOOL"
     },
     {
       "dex": 222,
@@ -2234,7 +2659,12 @@
       "target_stage": 5,
       "min_level": 5,
       "max_level": 15,
-      "original": "MAGIKARP"
+      "firered_min_level": 5,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 15,
+      "original_firered": "MAGIKARP",
+      "original_leafgreen": "MAGIKARP"
     },
     {
       "dex": 370,
@@ -2260,7 +2690,12 @@
       "target_stage": 5,
       "min_level": 5,
       "max_level": 15,
-      "original": "KRABBY"
+      "firered_min_level": 5,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 15,
+      "original_firered": "KRABBY",
+      "original_leafgreen": "HORSEA"
     },
     {
       "dex": 319,
@@ -2286,7 +2721,12 @@
       "target_stage": 5,
       "min_level": 15,
       "max_level": 25,
-      "original": "HORSEA"
+      "firered_min_level": 15,
+      "firered_max_level": 25,
+      "leafgreen_min_level": 15,
+      "leafgreen_max_level": 25,
+      "original_firered": "HORSEA",
+      "original_leafgreen": "KRABBY"
     },
     {
       "dex": 279,
@@ -2312,11 +2752,16 @@
       "target_stage": 5,
       "min_level": 30,
       "max_level": 35,
-      "original": "TENTACOOL"
+      "firered_min_level": 30,
+      "firered_max_level": 35,
+      "leafgreen_min_level": 30,
+      "leafgreen_max_level": 35,
+      "original_firered": "TENTACOOL",
+      "original_leafgreen": "TENTACOOL"
     },
     {
-      "dex": 225,
-      "species": "DELIBIRD",
+      "dex": 220,
+      "species": "SWINUB",
       "version": "crystal",
       "source_location": "ice-path",
       "source_area": "1f",
@@ -2325,8 +2770,8 @@
       "source_min": 21,
       "source_max": 21,
       "source_weight": 30,
-      "source_conditions": "time-night",
-      "source_encounter_id": 56623,
+      "source_conditions": "time-day",
+      "source_encounter_id": 56609,
       "terrain": "land",
       "habitat": "ice",
       "evolved": false,
@@ -2338,7 +2783,12 @@
       "target_stage": 5,
       "min_level": 27,
       "max_level": 27,
-      "original": "PSYDUCK"
+      "firered_min_level": 27,
+      "firered_max_level": 27,
+      "leafgreen_min_level": 27,
+      "leafgreen_max_level": 27,
+      "original_firered": "PSYDUCK",
+      "original_leafgreen": "SLOWPOKE"
     },
     {
       "dex": 215,
@@ -2364,11 +2814,16 @@
       "target_stage": 5,
       "min_level": 26,
       "max_level": 26,
-      "original": "PSYDUCK"
+      "firered_min_level": 26,
+      "firered_max_level": 26,
+      "leafgreen_min_level": 26,
+      "leafgreen_max_level": 26,
+      "original_firered": "PSYDUCK",
+      "original_leafgreen": "SLOWPOKE"
     },
     {
-      "dex": 220,
-      "species": "SWINUB",
+      "dex": 225,
+      "species": "DELIBIRD",
       "version": "crystal",
       "source_location": "ice-path",
       "source_area": "1f",
@@ -2377,8 +2832,8 @@
       "source_min": 21,
       "source_max": 21,
       "source_weight": 30,
-      "source_conditions": "time-day",
-      "source_encounter_id": 56609,
+      "source_conditions": "time-night",
+      "source_encounter_id": 56623,
       "terrain": "land",
       "habitat": "ice",
       "evolved": false,
@@ -2390,7 +2845,12 @@
       "target_stage": 5,
       "min_level": 29,
       "max_level": 29,
-      "original": "PSYDUCK"
+      "firered_min_level": 29,
+      "firered_max_level": 29,
+      "leafgreen_min_level": 29,
+      "leafgreen_max_level": 29,
+      "original_firered": "PSYDUCK",
+      "original_leafgreen": "SLOWPOKE"
     },
     {
       "dex": 361,
@@ -2416,7 +2876,12 @@
       "target_stage": 5,
       "min_level": 26,
       "max_level": 26,
-      "original": "GOLBAT"
+      "firered_min_level": 26,
+      "firered_max_level": 26,
+      "leafgreen_min_level": 26,
+      "leafgreen_max_level": 26,
+      "original_firered": "GOLBAT",
+      "original_leafgreen": "GOLBAT"
     },
     {
       "dex": 363,
@@ -2442,7 +2907,12 @@
       "target_stage": 5,
       "min_level": 30,
       "max_level": 30,
-      "original": "SEEL"
+      "firered_min_level": 30,
+      "firered_max_level": 30,
+      "leafgreen_min_level": 30,
+      "leafgreen_max_level": 30,
+      "original_firered": "SEEL",
+      "original_leafgreen": "SEEL"
     },
     {
       "dex": 325,
@@ -2468,7 +2938,12 @@
       "target_stage": 7,
       "min_level": 29,
       "max_level": 29,
-      "original": "GEODUDE"
+      "firered_min_level": 29,
+      "firered_max_level": 29,
+      "leafgreen_min_level": 29,
+      "leafgreen_max_level": 29,
+      "original_firered": "GEODUDE",
+      "original_leafgreen": "GEODUDE"
     },
     {
       "dex": 191,
@@ -2494,7 +2969,12 @@
       "target_stage": 7,
       "min_level": 35,
       "max_level": 35,
-      "original": "GLOOM"
+      "firered_min_level": 35,
+      "firered_max_level": 35,
+      "leafgreen_min_level": 35,
+      "leafgreen_max_level": 35,
+      "original_firered": "GLOOM",
+      "original_leafgreen": "WEEPINBELL"
     },
     {
       "dex": 164,
@@ -2520,7 +3000,12 @@
       "target_stage": 7,
       "min_level": 30,
       "max_level": 30,
-      "original": "ODDISH"
+      "firered_min_level": 30,
+      "firered_max_level": 30,
+      "leafgreen_min_level": 30,
+      "leafgreen_max_level": 30,
+      "original_firered": "ODDISH",
+      "original_leafgreen": "BELLSPROUT"
     },
     {
       "dex": 188,
@@ -2546,7 +3031,12 @@
       "target_stage": 7,
       "min_level": 30,
       "max_level": 30,
-      "original": "DUNSPARCE"
+      "firered_min_level": 30,
+      "firered_max_level": 30,
+      "leafgreen_min_level": 30,
+      "leafgreen_max_level": 30,
+      "original_firered": "DUNSPARCE",
+      "original_leafgreen": "DUNSPARCE"
     },
     {
       "dex": 170,
@@ -2572,7 +3062,12 @@
       "target_stage": 7,
       "min_level": 5,
       "max_level": 15,
-      "original": "MAGIKARP"
+      "firered_min_level": 5,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 15,
+      "original_firered": "MAGIKARP",
+      "original_leafgreen": "MAGIKARP"
     },
     {
       "dex": 366,
@@ -2598,7 +3093,12 @@
       "target_stage": 7,
       "min_level": 5,
       "max_level": 20,
-      "original": "TENTACOOL"
+      "firered_min_level": 5,
+      "firered_max_level": 20,
+      "leafgreen_min_level": 5,
+      "leafgreen_max_level": 20,
+      "original_firered": "TENTACOOL",
+      "original_leafgreen": "TENTACOOL"
     },
     {
       "dex": 321,
@@ -2624,7 +3124,12 @@
       "target_stage": 7,
       "min_level": 35,
       "max_level": 40,
-      "original": "TENTACRUEL"
+      "firered_min_level": 35,
+      "firered_max_level": 40,
+      "leafgreen_min_level": 35,
+      "leafgreen_max_level": 40,
+      "original_firered": "TENTACRUEL",
+      "original_leafgreen": "TENTACRUEL"
     },
     {
       "dex": 207,
@@ -2650,7 +3155,12 @@
       "target_stage": 8,
       "min_level": 32,
       "max_level": 32,
-      "original": "MANKEY"
+      "firered_min_level": 32,
+      "firered_max_level": 32,
+      "leafgreen_min_level": 32,
+      "leafgreen_max_level": 32,
+      "original_firered": "MANKEY",
+      "original_leafgreen": "MANKEY"
     },
     {
       "dex": 232,
@@ -2676,7 +3186,12 @@
       "target_stage": 8,
       "min_level": 32,
       "max_level": 32,
-      "original": "EKANS"
+      "firered_min_level": 32,
+      "firered_max_level": 32,
+      "leafgreen_min_level": 32,
+      "leafgreen_max_level": 32,
+      "original_firered": "EKANS",
+      "original_leafgreen": "SANDSHREW"
     },
     {
       "dex": 227,
@@ -2702,7 +3217,12 @@
       "target_stage": 8,
       "min_level": 32,
       "max_level": 32,
-      "original": "SPEAROW"
+      "firered_min_level": 32,
+      "firered_max_level": 32,
+      "leafgreen_min_level": 32,
+      "leafgreen_max_level": 32,
+      "original_firered": "SPEAROW",
+      "original_leafgreen": "SPEAROW"
     },
     {
       "dex": 294,
@@ -2728,7 +3248,12 @@
       "target_stage": 8,
       "min_level": 40,
       "max_level": 40,
-      "original": "ONIX"
+      "firered_min_level": 40,
+      "firered_max_level": 40,
+      "leafgreen_min_level": 40,
+      "leafgreen_max_level": 40,
+      "original_firered": "ONIX",
+      "original_leafgreen": "ONIX"
     },
     {
       "dex": 371,
@@ -2754,7 +3279,12 @@
       "target_stage": 8,
       "min_level": 32,
       "max_level": 32,
-      "original": "ZUBAT"
+      "firered_min_level": 32,
+      "firered_max_level": 32,
+      "leafgreen_min_level": 32,
+      "leafgreen_max_level": 32,
+      "original_firered": "ZUBAT",
+      "original_leafgreen": "ZUBAT"
     },
     {
       "dex": 305,
@@ -2780,7 +3310,12 @@
       "target_stage": 8,
       "min_level": 42,
       "max_level": 42,
-      "original": "PRIMEAPE"
+      "firered_min_level": 42,
+      "firered_max_level": 42,
+      "leafgreen_min_level": 42,
+      "leafgreen_max_level": 42,
+      "original_firered": "PRIMEAPE",
+      "original_leafgreen": "PRIMEAPE"
     },
     {
       "dex": 202,
@@ -2806,7 +3341,12 @@
       "target_stage": 8,
       "min_level": 34,
       "max_level": 34,
-      "original": "ZUBAT"
+      "firered_min_level": 34,
+      "firered_max_level": 34,
+      "leafgreen_min_level": 34,
+      "leafgreen_max_level": 34,
+      "original_firered": "ZUBAT",
+      "original_leafgreen": "ZUBAT"
     },
     {
       "dex": 217,
@@ -2832,7 +3372,12 @@
       "target_stage": 8,
       "min_level": 32,
       "max_level": 32,
-      "original": "ZUBAT"
+      "firered_min_level": 32,
+      "firered_max_level": 32,
+      "leafgreen_min_level": 32,
+      "leafgreen_max_level": 32,
+      "original_firered": "ZUBAT",
+      "original_leafgreen": "ZUBAT"
     },
     {
       "dex": 297,
@@ -2858,7 +3403,12 @@
       "target_stage": 8,
       "min_level": 44,
       "max_level": 44,
-      "original": "ARBOK"
+      "firered_min_level": 44,
+      "firered_max_level": 44,
+      "leafgreen_min_level": 44,
+      "leafgreen_max_level": 44,
+      "original_firered": "ARBOK",
+      "original_leafgreen": "SANDSLASH"
     },
     {
       "dex": 303,
@@ -2884,7 +3434,12 @@
       "target_stage": 8,
       "min_level": 44,
       "max_level": 44,
-      "original": "MAROWAK"
+      "firered_min_level": 44,
+      "firered_max_level": 44,
+      "leafgreen_min_level": 44,
+      "leafgreen_max_level": 44,
+      "original_firered": "MAROWAK",
+      "original_leafgreen": "MAROWAK"
     },
     {
       "dex": 171,
@@ -2910,7 +3465,12 @@
       "target_stage": 9,
       "min_level": 25,
       "max_level": 35,
-      "original": "SEADRA"
+      "firered_min_level": 25,
+      "firered_max_level": 35,
+      "leafgreen_min_level": 25,
+      "leafgreen_max_level": 35,
+      "original_firered": "SEADRA",
+      "original_leafgreen": "KINGLER"
     },
     {
       "dex": 200,
@@ -2936,7 +3496,12 @@
       "target_stage": 9,
       "min_level": 48,
       "max_level": 48,
-      "original": "HAUNTER"
+      "firered_min_level": 48,
+      "firered_max_level": 48,
+      "leafgreen_min_level": 48,
+      "leafgreen_max_level": 48,
+      "original_firered": "HAUNTER",
+      "original_leafgreen": "HAUNTER"
     },
     {
       "dex": 334,
@@ -2962,7 +3527,12 @@
       "target_stage": 9,
       "min_level": 41,
       "max_level": 41,
-      "original": "PSYDUCK"
+      "firered_min_level": 41,
+      "firered_max_level": 41,
+      "leafgreen_min_level": 41,
+      "leafgreen_max_level": 41,
+      "original_firered": "PSYDUCK",
+      "original_leafgreen": "SLOWPOKE"
     },
     {
       "dex": 246,
@@ -2988,7 +3558,12 @@
       "target_stage": 9,
       "min_level": 15,
       "max_level": 15,
-      "original": "LARVITAR"
+      "firered_min_level": 15,
+      "firered_max_level": 15,
+      "leafgreen_min_level": 15,
+      "leafgreen_max_level": 15,
+      "original_firered": "LARVITAR",
+      "original_leafgreen": "LARVITAR"
     },
     {
       "dex": 344,
@@ -3014,7 +3589,12 @@
       "target_stage": 9,
       "min_level": 41,
       "max_level": 41,
-      "original": "MEOWTH"
+      "firered_min_level": 41,
+      "firered_max_level": 41,
+      "leafgreen_min_level": 41,
+      "leafgreen_max_level": 41,
+      "original_firered": "MEOWTH",
+      "original_leafgreen": "MEOWTH"
     },
     {
       "dex": 247,
@@ -3040,7 +3620,12 @@
       "target_stage": 9,
       "min_level": 20,
       "max_level": 20,
-      "original": "NATU"
+      "firered_min_level": 20,
+      "firered_max_level": 20,
+      "leafgreen_min_level": 20,
+      "leafgreen_max_level": 20,
+      "original_firered": "NATU",
+      "original_leafgreen": "NATU"
     },
     {
       "dex": 354,
@@ -3066,7 +3651,12 @@
       "target_stage": 9,
       "min_level": 41,
       "max_level": 41,
-      "original": "MEOWTH"
+      "firered_min_level": 41,
+      "firered_max_level": 41,
+      "leafgreen_min_level": 41,
+      "leafgreen_max_level": 41,
+      "original_firered": "MEOWTH",
+      "original_leafgreen": "MEOWTH"
     }
   ],
   "excluded": [

@@ -1,4 +1,4 @@
-"""Build native FireRed table additions and a complete, auditable placement report.
+"""Build native FireRed/LeafGreen table additions and auditable placement reports.
 
 Python 3.10+, standard library only. All inputs are checked-in snapshots.
 Does not download or package ROMs, graphics, or engine source.
@@ -318,36 +318,74 @@ def candidates():
 
 
 def destinations():
+    """Return shared FRLG slots with edition-specific vanilla expectations."""
     ids = map_ids()
     tables = json.loads((SOURCE / 'firered_wild_encounters.json').read_text())[
         'wild_encounter_groups'
     ][0]['encounters']
-    dest = []
 
+    by_game = {'firered': {}, 'leafgreen': {}}
     for row in tables:
-        if not row['base_label'].endswith('_FireRed'):
-            continue
-
         name = row['map'][4:]
 
         # Event variants and Unown-form tables remain vanilla.
         if 'ALTERING_CAVE' in name or 'TANOBY_RUINS_' in name:
             continue
 
+        label = row['base_label']
+        if label.endswith('_FireRed'):
+            game = 'firered'
+        elif label.endswith('_LeafGreen'):
+            game = 'leafgreen'
+        else:
+            continue
+
+        if row['map'] in by_game[game]:
+            raise ValueError(f'Duplicate {game} encounter table for {row["map"]}')
+        by_game[game][row['map']] = row
+
+    missing_leafgreen = sorted(set(by_game['firered']) - set(by_game['leafgreen']))
+    missing_firered = sorted(set(by_game['leafgreen']) - set(by_game['firered']))
+    if missing_leafgreen or missing_firered:
+        raise ValueError(
+            'FireRed/LeafGreen encounter map mismatch: '
+            f'missing LeafGreen={missing_leafgreen}, missing FireRed={missing_firered}'
+        )
+
+    dest = []
+    for map_key in sorted(by_game['firered']):
+        firered = by_game['firered'][map_key]
+        leafgreen = by_game['leafgreen'][map_key]
+        name = map_key[4:]
+
         rank = target_stage(name)
         assert name in ids, name
 
         for terrain, (field, indices) in FIELDS.items():
-            if field not in row:
+            has_fr = field in firered
+            has_lg = field in leafgreen
+            if has_fr != has_lg:
+                raise ValueError(
+                    f'FireRed/LeafGreen field mismatch for {name} {field}'
+                )
+            if not has_fr:
                 continue
 
-            mons = row[field]['mons']
-            weights = WEIGHTS[terrain]
+            fr_area = firered[field]
+            lg_area = leafgreen[field]
 
-            # Every compatible slot is available. Native FireRed species are not
-            # protected or guaranteed a minimum percentage of the encounter table.
+            fr_mons = fr_area['mons']
+            lg_mons = lg_area['mons']
+            if len(fr_mons) != len(lg_mons):
+                raise ValueError(
+                    f'FireRed/LeafGreen slot-count mismatch for {name} {field}'
+                )
+
+            weights = WEIGHTS[terrain]
             for local, idx in enumerate(indices):
-                slot = mons[idx]
+                fr_slot = fr_mons[idx]
+                lg_slot = lg_mons[idx]
+
                 dest.append(
                     dict(
                         map=ids[name],
@@ -366,11 +404,18 @@ def destinations():
                                 terrain, 0
                             ),
                         ),
-                        min_level=slot['min_level'],
-                        max_level=slot['max_level'],
-                        original=slot['species'][8:],
+                        # Keep the legacy min/max fields as FireRed values for
+                        # backward-compatible reports, and record LeafGreen
+                        # separately. Placement scoring below considers both.
+                        min_level=fr_slot['min_level'],
+                        max_level=fr_slot['max_level'],
+                        firered_min_level=fr_slot['min_level'],
+                        firered_max_level=fr_slot['max_level'],
+                        leafgreen_min_level=lg_slot['min_level'],
+                        leafgreen_max_level=lg_slot['max_level'],
+                        original_firered=fr_slot['species'][8:],
+                        original_leafgreen=lg_slot['species'][8:],
                         habitat=habitat(name.replace('_', '-')),
-                        native_slots=mons,
                     )
                 )
 
@@ -415,11 +460,23 @@ def build():
 
             # Source wild level is a placement preference, not a hard requirement.
             # Evolved Pokemon are already pushed later by placement_phase(), so allow
-            # FireRed's native level ranges to determine their actual encounter levels.
+            # FRLG's native level ranges to determine their actual encounter levels.
             source_mid = (sp['source_min'] + sp['source_max']) / 2
-            dest_mid = (d['min_level'] + d['max_level']) / 2
+            firered_mid = (
+                d['firered_min_level'] + d['firered_max_level']
+            ) / 2
+            leafgreen_mid = (
+                d['leafgreen_min_level'] + d['leafgreen_max_level']
+            ) / 2
+            dest_mid = (firered_mid + leafgreen_mid) / 2
 
-            level_penalty = abs(dest_mid - source_mid)
+            # Use the shared midpoint for general scoring, while also penalizing
+            # a placement that fits one edition substantially worse than the other.
+            level_penalty = (
+                abs(dest_mid - source_mid)
+                + abs(firered_mid - source_mid) * 0.25
+                + abs(leafgreen_mid - source_mid) * 0.25
+            )
 
             # Prefer not to move evolved Pokemon dramatically below their source-game
             # encounter level, but don't make that a hard capacity constraint.
@@ -446,11 +503,7 @@ def build():
         placements.append(
             {
                 **sp,
-                **{
-                    k: v
-                    for k, v in d.items()
-                    if k not in ('native_slots', 'habitat')
-                },
+                **{k: v for k, v in d.items() if k != 'habitat'},
             }
         )
 
@@ -463,12 +516,21 @@ def build():
 
     lines = [
         '-- Generated by tools/build.py. Species names, never National Dex numeric IDs.',
+        '-- One placement plan; expected vanilla species are edition-specific.',
         'return {',
     ]
     for p in placements:
         lines.append(
-            '  { map = "%s", terrain = "%s", slot = %d, species = "%s", expected = "%s" },'
-            % (p['map'], p['field'], p['slot'], p['species'], p['original'])
+            '  { map = "%s", terrain = "%s", slot = %d, species = "%s", '
+            'expected = { firered = "%s", leafgreen = "%s" } },'
+            % (
+                p['map'],
+                p['field'],
+                p['slot'],
+                p['species'],
+                p['original_firered'],
+                p['original_leafgreen'],
+            )
         )
     lines.append('}')
     (generated / 'placements.lua').write_text(
@@ -499,6 +561,12 @@ def build():
         'target_stage',
         'min_level',
         'max_level',
+        'firered_min_level',
+        'firered_max_level',
+        'leafgreen_min_level',
+        'leafgreen_max_level',
+        'original_firered',
+        'original_leafgreen',
     ]
     with (ROOT / 'PLACEMENTS.csv').open('w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, headers, extrasaction='ignore')
@@ -524,7 +592,7 @@ def build():
 
     print(
         f'{len(placements)} species; '
-        f'{len(set(p["map"] for p in placements))} maps; '
+        f'{len(set(p["map"] for p in placements))} shared FRLG maps; '
         f'{len(excluded)} documented exclusions'
     )
 

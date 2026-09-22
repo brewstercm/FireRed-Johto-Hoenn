@@ -45,4 +45,4 @@ jobs:
           fi
           gh release create "$TAG" "$RUNNER_TEMP/mod-release/$ID-$VERSION.zip" \
             --target "$GITHUB_SHA" --title "$NAME $VERSION" --generate-notes \
-            --notes "Import the attached $ID-$VERSION.zip in Gen1Recomp's mod manager. Requires native FireRed on Gen1Recomp 0.2.73+. Offline validation runs before publishing; in-game playtesting is still pending. See the repository README for encounter scope and placement details."
+            --notes "Import the attached $ID-$VERSION.zip in Gen1Recomp's mod manager. Requires native FireRed or LeafGreen on Gen1Recomp 0.2.73+. Offline validation runs against both editions before publishing; in-game playtesting is still recommended. See the repository README for encounter scope and placement details."
