@@ -4,3 +4,9 @@ __pycache__/
 *.pyc
 .venv/
 dist/
+
+# Obsidian vault (separate repo)
+FRJH-Vault/
+
+# AI agent instructions (separate from vault)
+.copilot-instructions.md

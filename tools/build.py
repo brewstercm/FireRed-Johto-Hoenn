@@ -113,6 +113,167 @@ SPECIES_HABITAT = {
     # City outskirts / developed routes
     'MURKROW': 'urban',
     'HOUNDOUR': 'urban',
+
+    # === Sinnoh species (387-493) ===
+    # field (grassland / route encounters)
+    'STARLY': 'field',
+    'STARAVIA': 'field',
+    'STARAPTOR': 'field',
+    'BIDOOF': 'field',
+    'BIBAREL': 'field',
+    'PICHU': 'field',
+    'PIKACHU': 'field',
+    'RAICHU': 'field',
+    'SHINX': 'field',
+    'LUXIO': 'field',
+    'LUXRAY': 'field',
+    'BUIZEL': 'field',
+    'FLOATZEL': 'field',
+    'PACHIRISU': 'field',
+    'MAGNEZONE': 'field',
+    'CHATOT': 'field',
+    'SNOM': 'field',
+    'SNOWMON': 'field',
+    'ABOMASNOW': 'field',
+    'TROPNIUS': 'field',
+    'CROAGUNK': 'field',
+    'TOXICROAK': 'field',
+    'FINNEON': 'field',
+    'LUMINEON': 'field',
+    'MANTYKE': 'field',
+    'SKUNTANK': 'field',
+    'STUNKY': 'field',
+    'BRONZOR': 'field',
+    'BRONZONG': 'field',
+    'PROPOASS': 'field',
+    'MAMOSWINE': 'field',
+    'GLISCOR': 'field',
+    'GLIGAR': 'field',
+    'DRAPION': 'field',
+    'SKORUPI': 'field',
+    'WEAVILE': 'field',
+    'SNEASEL': 'field',
+    'PAINTIL': 'field',
+    'BISHARP': 'field',
+    'DEINO': 'field',
+    'ZWEILOUS': 'field',
+    'HYDEIGON': 'field',
+
+    # forest (Eterna Forest, Lost Tower area)
+    'BURMY': 'forest',
+    'WORMADAM': 'forest',
+    'MOTHIM': 'forest',
+    'CHERUBI': 'forest',
+    'CHERRIM': 'forest',
+    'COMBEE': 'forest',
+    'VESPIQUEN': 'forest',
+    'YANMA': 'forest',
+    'YANMEGA': 'forest',
+    'SCYTHER': 'forest',
+    'SCIZOR': 'forest',
+    'AIPOM': 'forest',
+    'AMBIPOM': 'forest',
+    'TANGELA': 'forest',
+    'TANGROWTH': 'forest',
+
+    # cave (Mt. Coronet, Solaceon Ruins, Lake Verity area)
+    'GEODUDE': 'cave',
+    'GRAVELER': 'cave',
+    'GOLEM': 'cave',
+    'ONIX': 'cave',
+    'STEELIX': 'cave',
+    'ZUBAT': 'cave',
+    'GOLBAT': 'cave',
+    'CROBAT': 'cave',
+    'MAGIKARP': 'cave',
+    'GYARADOS': 'cave',
+    'CRANIDOS': 'cave',
+    'RAMPARDOS': 'cave',
+    'SHIELDON': 'cave',
+    'BASTIODON': 'cave',
+    'MACHOP': 'cave',
+    'MACHOKE': 'cave',
+    'MACHAMP': 'cave',
+    'DUSCLOPS': 'cave',
+    'DUSKNOIR': 'cave',
+    'DUGTRIO': 'cave',
+    'MAGMAR': 'cave',
+    'MAGMORTAR': 'cave',
+    'ELECTABUZZ': 'cave',
+    'ELECTIVIRE': 'cave',
+    'MAGBY': 'cave',
+    'RHYHORN': 'cave',
+    'RHYDON': 'cave',
+    'RHYPERIOR': 'cave',
+    'MIENFOO': 'cave',
+    'MIENSHAO': 'cave',
+    'SLAKOTH': 'cave',
+    'VIGOROTH': 'cave',
+    'SLAKING': 'cave',
+    'GIBLE': 'cave',
+    'GABITE': 'cave',
+    'GARCHOMP': 'cave',
+
+    # wetland (Lake Valor, Lake Acuity, Lake Verity)
+    'BARBOACH': 'wetland',
+    'WHISCASH': 'wetland',
+    'CORPHISH': 'wetland',
+    'CRAWDAUNT': 'wetland',
+    'FEEBAS': 'wetland',
+    'MILOTIC': 'wetland',
+    'SEEL': 'wetland',
+    'DEWGONG': 'wetland',
+    'LAPRAS': 'wetland',
+    'SWABLU': 'wetland',
+    'ALTARIA': 'wetland',
+    'SPHEAL': 'wetland',
+    'SEALEO': 'wetland',
+    'WALREIN': 'wetland',
+    'STARYU': 'wetland',
+    'STARMIE': 'wetland',
+    'REMORAID': 'wetland',
+    'OCTILLERY': 'wetland',
+    'TENTACOOL': 'wetland',
+    'TENTACRUEL': 'wetland',
+
+    # coastal (Seabreak Path, Fullmoon Island)
+    'WINGULL': 'coast',
+    'PELIPPER': 'coast',
+    'RELICANTH': 'coast',
+
+    # mountain (Mt. Coronet summit, Iron Mountain)
+    'SNORER': 'mountain',
+    'ABOMASNOW': 'mountain',
+    'RHYPHER': 'mountain',
+    'MAGMAR': 'mountain',
+    'MAGMORTAR': 'mountain',
+
+    # ice (Route 206, Route 207, Lake Acuity)
+    'SNOM': 'ice',
+    'SNOWMON': 'ice',
+    'SWINUB': 'ice',
+    'POEWINE': 'ice',
+    'MAMOSWINE': 'ice',
+    'SNORUNT': 'ice',
+    'GLALIE': 'ice',
+    'FROSLOSS': 'ice',
+
+    # ghost/haunted (Lost Tower, Solaceon Ruins)
+    'GASTLY': 'ghost',
+    'HAUNTER': 'ghost',
+    'GENGAR': 'ghost',
+    'MISDREAVUS': 'ghost',
+    'SPIRITOMB': 'ghost',
+    'SHUPPET': 'ghost',
+    'BANETTE': 'ghost',
+    'DUSKULL': 'ghost',
+    'DUSCLOPS': 'ghost',
+    'DUSKNOIR': 'ghost',
+
+    # volcanic (Ramanas Park, Heatran's crater)
+    'MAGBY': 'volcanic',
+    'MAGMAR': 'volcanic',
+    'MAGMORTAR': 'volcanic',
 }
 
 # These lines should still feel special even though their source game's
@@ -228,6 +389,7 @@ def candidates():
         if not (
             (e['version_id'] == '6' and 152 <= dex <= 251)
             or (e['version_id'] == '9' and 252 <= dex <= 386)
+            or (e['version_id'] == '14' and 387 <= dex <= 493)
         ):
             continue
 
@@ -244,7 +406,12 @@ def candidates():
 
         area = areas[e['location_area_id']]
         location = locations[area['location_id']]
-        version = 'crystal' if e['version_id'] == '6' else 'emerald'
+        if e['version_id'] == '6':
+            version = 'crystal'
+        elif e['version_id'] == '14':
+            version = 'platinum'
+        else:
+            version = 'emerald'
 
         # Emerald's Cave of Origin encounter floors are not normally accessible.
         if version == 'emerald' and location == 'cave-of-origin':

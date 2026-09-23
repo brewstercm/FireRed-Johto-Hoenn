@@ -28,9 +28,38 @@ EMERALD = {
     9: 'desert-underpass',
 }
 
+# Platinum → FRLG progression mapping
+# Platinum has 16 badges; mapped to FRLG's 0-9 scale:
+#   0 = opening, 1-2 = early game, 3-4 = mid game, 5-6 = late game, 7-9 = postgame
+PLATINUM = {
+    # Opening - early routes and lakes (badge 0)
+    0: 'twinleaf-town lake-verity lake-acuity lake-valor valor-lakefront acuity-lakefront sinnoh-pokemart sinnoh-route-201 sinnoh-route-202 sinnoh-route-203',
+    # Early game - Jubilife, Pastoria, routes 204-208 (badge 1-2)
+    1: 'jubilife-city pastoria-city sinnoh-route-204 sinnoh-route-205 sinnoh-route-206 sinnoh-route-207 sinnoh-route-208',
+    # Mid game - Eterna, Hearthome, Canalave, Oreburgh (badge 3-4)
+    2: 'eterna-city hearthome-city canalave-city oreburgh-city eterna-forest old-chateau lost-tower oreburgh-gate oreburgh-mine wayward-cave',
+    # Mid-late - Snowpoint, Sunyshore, Veilstone (badge 5-6)
+    3: 'snowpoint-city sunyshore-city veilstone-city snowpoint-temple great-marsh floaroma-meadow trophy-garden ravaged-path sinnoh-route-209 sinnoh-route-210 sinnoh-route-211 sinnoh-route-212 sinnoh-route-213 sinnoh-route-214 sinnoh-route-215 sinnoh-route-216',
+    # Late - Mt. Coronet, Solaceon Ruins (badge 7)
+    4: 'mt-coronet solaceon-ruins sinnoh-route-217 sinnoh-route-218 sinnoh-route-219 sinnoh-route-221 sinnoh-route-222 sinnoh-route-224 sinnoh-route-225 sinnoh-route-227 sinnoh-route-228 sinnoh-route-229',
+    # Postgame prep - Seabreak Path, Stark Mountain, Lakefronts (badge 8)
+    5: 'sinnoh-sea-route-220 sinnoh-sea-route-223 sinnoh-sea-route-226 sinnoh-sea-route-230 stark-mountain newmoon-island resort-area valor-lakefront acuity-lakefront',
+    # Postgame - Spear Pillar, Sendoff Spring, Flower Paradise, Distortion World (badge 9+)
+    6: 'spear-pillar sendoff-spring flower-paradise ruin-maniac-cave fuego-ironworks valley-windworks turnback-cave maniac-tunnel iron-island distortion-world',
+    # Postgame end - Hall of Origin, Roaming encounters (legendary hunting)
+    7: 'sinnoh-hall-of-origin-1 roaming-sinnoh',
+    # Postgame final - Celestic Town (Champion path)
+    8: 'celestic-town',
+    # Postgame - Sinnoh Victory Road, Pokemon League
+    9: 'sinnoh-victory-road sinnoh-pokemon-league',
+}
+
 
 def source_stage(version, location, area, method, species):
-    groups = CRYSTAL if version == 'crystal' else EMERALD
+    if version == 'platinum':
+        groups = PLATINUM
+    else:
+        groups = CRYSTAL if version == 'crystal' else EMERALD
     ranks = {name: rank for rank, names in groups.items() for name in names.split()}
     if location not in ranks:
         raise ValueError(f'Unranked source: {version} {location}/{area}')
@@ -53,6 +82,38 @@ def source_stage(version, location, area, method, species):
             rank = max(rank, 4)
         if method == 'super-rod':
             rank = max(rank, 9)
+    elif version == 'platinum':
+        # Platinum-specific progression adjustments
+        if location == 'route-205' and area == 'mt-coronet-entrance':
+            rank = max(rank, 3)
+        if location == 'route-207' and area == 'mt-coronet-1f':
+            rank = max(rank, 5)
+        if location == 'route-207' and area == 'mt-coronet-2f':
+            rank = max(rank, 6)
+        if location == 'route-207' and area == 'mt-coronet-summit':
+            rank = max(rank, 7)
+        if location == 'lake-verity' and method in ('surf', 'good-rod'):
+            rank = max(rank, 2)
+        if location == 'lake-valor' and method == 'super-rod':
+            rank = max(rank, 4)
+        if location == 'lake-acuity' and method == 'super-rod':
+            rank = max(rank, 6)
+        if location == 'seabreak-path':
+            rank = max(rank, 7)
+        if location == 'fullmoon-island':
+            rank = max(rank, 7)
+        if location == 'newmoon-island':
+            rank = max(rank, 8)
+        if location == 'grand-underground':
+            rank = max(rank, 8)
+        if method.startswith('headbutt'):
+            rank = max(rank, 3)
+        if method == 'rock-smash':
+            rank = max(rank, 4)
+        if method in ('surf', 'good-rod'):
+            rank = max(rank, 5)
+        if method == 'super-rod':
+            rank = max(rank, 8)
     else:
         if location == 'hoenn-route-111' and species in ('trapinch', 'cacnea', 'baltoy'):
             rank = 4
